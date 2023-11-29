@@ -20,10 +20,14 @@
       </div>
     </div>
     <div class="header__banner">
-      <img src="../../assets/img/back.jpg" alt="" />
+      <div class="backDrop">
+        <img src="../../assets/img/back.jpg" alt="" />
+      </div>
       <div class="movie__banner">
         <div class="header__movie">
-          <img src="../../assets/img/poster.jpg" alt="" />
+          <a href="#">
+            <img src="../../assets/img/poster.jpg" alt="" />
+          </a>
         </div>
         <div class="movie__text">
           <div class="movie__title">Oppenheimer</div>
@@ -136,22 +140,37 @@ nav .menu li a:hover::before {
 
 .header__banner {
   width: 100%;
-  height: 600px;
+  height: 400px;
   margin-top: 50px;
   position: relative;
+  .backDrop {
+    background-image: linear-gradient(
+      to right,
+      rgba(31.5, 10.5, 10.5, 1) calc((100vw - 170px) - 340px),
+      rgba(31.5, 10.5, 10.5, 0.84) 50%,
+      rgba(31.5, 10.5, 10.5, 0.84) 100%
+    );
+    img {
+      opacity: 0.3;
+      height: 660px;
+    }
+  }
   //   background-image: url('../../assets/img/back.jpg');
   //   background-repeat: no-repeat;
   //   background-size: contain;
 }
-.header__banner img {
-  width: 100%;
-  height: inherit;
-  //   filter: blur(5px);
-}
+
 .movie__banner {
   width: 100%;
   height: inherit;
   display: flex;
+
+  img {
+    width: 100%;
+    height: inherit;
+
+    //   filter: blur(5px);
+  }
 }
 .header__movie {
   width: 50%;
@@ -185,7 +204,7 @@ nav .menu li a:hover::before {
 
   .movie__actor {
     ul {
-      width: 100%;
+      width: 75%;
       display: flex;
       justify-content: space-around;
       li {
