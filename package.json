@@ -1,0 +1,11 @@
+{
+  "name": "movie",
+  "version": "1.0.0",
+  "description": "vue.js와 tmdb api를 이용한 영화사이트 만들기",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
