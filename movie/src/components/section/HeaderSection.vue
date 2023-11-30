@@ -6,8 +6,12 @@
         <nav>
           <ul class="menu">
             <li v-for="(item, index) in menuItems" :key="index">
-              <a href="#" @mouseover="changeColor(index)" @mouseout="resetColor"
-                :class="{ inactive: activeIndex >= 0 && activeIndex !== index }">
+              <a
+                href="#"
+                @mouseover="changeColor(index)"
+                @mouseout="resetColor"
+                :class="{ inactive: activeIndex >= 0 && activeIndex !== index }"
+              >
                 {{ item }}
               </a>
             </li>
@@ -75,7 +79,6 @@ const resetColor = () => {
   padding: 30px;
   color: white;
 }
-
 
 .header__intro {
   display: flex;
@@ -152,15 +155,16 @@ nav .menu li a:hover::before {
   position: relative;
 
   .backDrop {
-    background-image: linear-gradient(to right,
-        rgba(31.5, 10.5, 10.5, 1) calc((100vw - 170px) - 340px),
-        rgba(31.5, 10.5, 10.5, 0.84) 50%,
-        rgba(31.5, 10.5, 10.5, 0.84) 100%);
+    background-image: linear-gradient(
+      to right,
+      rgba(31.5, 10.5, 10.5, 1) calc((100vw - 170px) - 340px),
+      rgba(31.5, 10.5, 10.5, 0.84) 50%,
+      rgba(31.5, 10.5, 10.5, 0.84) 100%
+    );
 
     img {
       height: 60vh;
       opacity: 0.3;
-
     }
   }
 
@@ -171,19 +175,18 @@ nav .menu li a:hover::before {
     .header__movie {
       width: 100%;
 
-
       img {
         position: absolute;
         left: 11%;
-        top: 12%;
+        top: 8%;
         width: 20%;
-        height: 45vh;
+        height: 50vh;
       }
     }
   }
 }
 
-// header__ banner 
+// header__ banner
 
 .movie__text {
   width: 50%;
@@ -226,8 +229,6 @@ nav .menu li a:hover::before {
     }
   }
 
-
-
   .movie__desc {
     font-size: 0.9rem;
     font-weight: 600;
@@ -267,4 +268,5 @@ nav .menu li a:hover::before {
       }
     }
   }
-}</style>
+}
+</style>
